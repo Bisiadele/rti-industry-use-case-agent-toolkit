@@ -4,13 +4,49 @@ A GitHub Copilot agent for generating industry-specific use cases for **Microsof
 
 ## Overview
 
-This agent automates the creation of comprehensive industry use case documentation, including:
+The Industry Use Case Creation Agent is an AI‑driven toolkit for generating industry use case assets for Microsoft Fabric Real‑Time Intelligence (RTI) and other Microsoft data and AI products.
+It helps teams identify both known and emerging industry challenges—including issues customers may not yet be explicitly asking for—and turns them into customer‑ready storylines, value narratives, and reference architectures that support product strategy, go‑to‑market motions, and customer engagements.
+
+## Who This Is For
+This agent is designed to be used across Microsoft teams, including:
+
+Product Marketing — to develop consistent, repeatable use case messaging grounded in real industry problems
+Field Enablement — to equip sellers and specialists with structured, credible use cases
+Customer Engagement & Solutions Teams — to frame conversations around value, outcomes, and architecture
+Product Groups — to explore and validate industry scenarios that inform roadmap and feature prioritization
+Customer Advocacy Teams (CAT) — to translate product capabilities into industry‑specific customer narratives
+
+## The agent generates the following industry use case assets. Outputs are intended to be shared, reviewed, and adapted across teams.
+Key outputs include:
+
 - Use case research and summary tables
-- Architecture explanations
-- Excalidraw architecture diagrams
-- Architecture storylines
-- Marp presentation decks
-- Fabric notebooks with synthetic data
+- Curated industry use case summaries grounded in external research and Microsoft documentation
+- Use case architecture explanation, diagram, and storyline
+  - - Customer‑ready storylines that connect business problems to outcomes
+  - - Value narratives framed around AI, efficiency, cost avoidance, risk reduction, and growth
+  - - Reference architecture explanations aligned to Microsoft Fabric RTI documentation patterns
+- Supporting documentation suitable for internal reviews and customer conversations
+  - - Presentation decks
+- Industry usecase specific Fabric notebook with synthetic data
+
+## How It Works (High‑Level)
+The agent follows a structured, multi‑phase workflow:
+
+1. Industry Discovery
+Gathers input on the target industry and business context.
+
+2. Research & Signal Gathering
+Synthesizes information from Microsoft documentation and publicly available industry sources (e.g., architecture centers, analyst research, market insights).
+
+3. Use Case Structuring
+Translates research into clear, structured use cases with defined problems, AI roles, data sources, and outcomes.
+
+4. Narrative & Architecture Development
+Expands selected use cases into detailed, enterprise‑ready narratives and architectural explanations tied to Microsoft Fabric RTI.
+
+5. Review & Refinement
+Supports iteration based on feedback to ensure relevance, clarity, and consistency.
+
 
 ## Prerequisites
 

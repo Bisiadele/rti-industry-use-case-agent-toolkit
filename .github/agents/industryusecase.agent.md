@@ -57,8 +57,8 @@ Gather comprehensive context about the requested task and return findings to the
 * Data Type Generated – Streaming events, telemetry, logs, transactions, images, signals, etc. 
 * End Users – Personas or roles that consume insights or act on outputs     
 * Estimated Annual Savings or Cost Avoidance (USD) – Based on AI-driven impact (reasonable assumptions) 
-* Implementation Effort – Low / Medium / High / Very High (add brief explanation on how ranges were determined)
-* Value of Implementation – Low / Medium / High / Very High (add brief explanation on how ranges were determined)
+* Implementation Effort – Low / Medium / High / Very High (add detailed explanation on how Implementation Effort ranges were determined and sources used for benchmarks)
+* Value of Implementation – Low / Medium / High / Very High (add detailed explanation on how Value of Implementation ranges were determined and sources used for benchmarks)
 * Reference / Source Links – URLs or citations supporting feasibility, benchmarks, or industry relevance 
 * Ensure the table is well-formatted in markdown for readability.
  Update the list of tasks to reflect the completion of Phase 3.

@@ -16,6 +16,15 @@ Customer Engagement & Solutions Teams — to frame conversations around value, o
 Product Groups — to explore and validate industry scenarios that inform roadmap and feature prioritization
 Customer Advocacy Teams (CAT) — to translate product capabilities into industry‑specific customer narratives
 
+## When to Use This Agent
+Use this agent when you need to:
+
+- Explore new or underdeveloped industry scenarios
+- Align on common use case language across teams
+- Prepare customer engagement storylines for Fabric RTI
+- Support product planning or GTM initiatives with industry context
+- Move from “features” to industry‑specific value conversations
+
 ## The agent generates the following industry use case assets 
 Outputs are intended to be shared, reviewed, and adapted across teams.
 Key outputs include:
@@ -120,9 +129,6 @@ staging-documentation/
   - Telecommunications
   - And more...
 
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contributing
 

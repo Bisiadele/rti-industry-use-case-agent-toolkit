@@ -1,0 +1,45 @@
+# Generated outputs (uncomment if you don't want to track)
+# staging-documentation/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+~$*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.ipynb_checkpoints/
+venv/
+env/
+.env
+
+# Node (if using Marp CLI)
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.pptx.bak
+
+# Jupyter
+.jupyter/
+
+# Exported images (keep originals, ignore duplicates)
+# staging-documentation/media/*.png.bak

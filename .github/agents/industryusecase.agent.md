@@ -97,39 +97,44 @@ Gather comprehensive context about the requested task and return findings to the
 
   End Users: [INSERT END USERS] 
 
-  1. Data Sources to Ingest & Process
-  Describe where the data originates, why it is real-time and / or batch, and what business signals it represents. 
+  1. Data Sources to Ingest & Stream
+  Describe where the data originates, why it is real-time and / or batch, and what business signals it represents.
+  Also refernce how data is streamed using some of the Real-time Intelligence features below:
+  Connectors
+  Eventstream
+  Event Schema Set
 
   2. Analyze & Transform 
-  Explain how data is ingested, processed, and enriched using some of the features below: 
-  Eventstream 
+  Explain how data is processed, stored, and enriched using some of the features below: 
+  Eventhouse
+  Anomaly Detector
   Data Factory 
-  Eventhouse 
   OneLake 
 
-  3. Model & Contextualize 
-  Describe how AI and analytics are applied, including: 
-  Fabric IQ
-  Digital Twin Builder 
-  Fabric Graph 
-  Machine Learning models
+  3. Model & Train
+  Describe how AI and analytics are applied to model, contextualize, and train the use case, including: 
+  Fabric IQ (Modeling): 
+    Digital Twin Builder 
+    Fabric Graph
+    Map
+  Fabric IQ (Training):
+    Data Agents
+    Operations Agents
+  Anomaly Detector
+  Other machine Learning models
 
-  4. Train & Score 
-  Explain Machine Learning models training, Anomaly detection, and real-time scoring as it applies to this use case. 
-
-  5. Visualize & Act 
-  Describe how insights are consumed and actions triggered using: 
-  Power BI 
-  Real-Time Dashboards 
-  Activator 
-
-  6. Get Assisted & Interact 
-  Explain user interaction and automation using: 
-  Fabric IQ
-  Data Agents 
+  4. Visualize 
+  Describe how insights are consumed and visulized:
+  KQL Queryset
+  Graph Queryset
+  Real-Time Dashboards
+  Power BI
+  
+  5. Decide & Act
+  Explain how actions are triggered and decision are made using:
+  Activator
   Operations Agents
-  Copilot 
-  The narrative should clearly connect business problem → data → analytics → decisions → outcomes. 
+
   Use clear, enterprise-ready storytelling and avoid generic descriptions. 
 Update the list of tasks to reflect the completion of Phase 5.
 </workflow>
@@ -295,7 +300,7 @@ After generating the Excalidraw JSON file, provide instructions:
   Activator → Notifications / Actions
 **Get Assisted & Interact:** Copilot, Data Agents, End Users (role-specific)
 
-### Common Relationships Reference
+### Common Relationships Reference. 
 - Data sources → IoT Hub → Eventstream (steps 1-2)
 - Eventstream → Eventhouse (step 3)
 - Eventhouse ↔ OneLake (bi-directional, step 4a)

@@ -16,17 +16,18 @@ Customer Engagement & Solutions Teams — to frame conversations around value, o
 Product Groups — to explore and validate industry scenarios that inform roadmap and feature prioritization
 Customer Advocacy Teams (CAT) — to translate product capabilities into industry‑specific customer narratives
 
-## The agent generates the following industry use case assets. Outputs are intended to be shared, reviewed, and adapted across teams.
+## The agent generates the following industry use case assets 
+Outputs are intended to be shared, reviewed, and adapted across teams.
 Key outputs include:
 
 - Use case research and summary tables
 - Curated industry use case summaries grounded in external research and Microsoft documentation
 - Use case architecture explanation, diagram, and storyline
-  - - Customer‑ready storylines that connect business problems to outcomes
-  - - Value narratives framed around AI, efficiency, cost avoidance, risk reduction, and growth
-  - - Reference architecture explanations aligned to Microsoft Fabric RTI documentation patterns
+  - Customer‑ready storylines that connect business problems to outcomes
+  - Value narratives framed around AI, efficiency, cost avoidance, risk reduction, and growth
+  - Reference architecture explanations aligned to Microsoft Fabric RTI documentation patterns
 - Supporting documentation suitable for internal reviews and customer conversations
-  - - Presentation decks
+  - Presentation decks
 - Industry usecase specific Fabric notebook with synthetic data
 
 ## How It Works (High‑Level)
@@ -71,12 +72,12 @@ Supports iteration based on feedback to ensure relevance, clarity, and consisten
 
 1. Open GitHub Copilot Chat in VS Code
 2. Select the **"Industry Use Case Creation agent"** from the agent picker (or type `@industryusecase`)
-3. Start by specifying an industry:
+3. Start by specifying an industry. You may also add specific use cases or attachments to provide context, but note that additional inputs may affect the agent’s behavior.
    ```
    I want to create use cases for the Healthcare industry
    ```
 
-4. Follow the guided workflow through all phases
+5. Follow the guided workflow through all phases
 
 ## Workflow Phases
 
@@ -86,11 +87,10 @@ Supports iteration based on feedback to ensure relevance, clarity, and consisten
 | 2 | Research Use Cases |
 | 3 | Summarize Use Cases (creates summary table) |
 | 4 | Review & Select Use Cases |
-| 5 | Create Written Architecture Explanations |
+| 5 | Create Written Use Case Explanations |
 | 6 | Enforce Style Guidelines |
 | 7 | Generate Architecture Diagrams (Excalidraw) |
 | 8 | Create Architecture Storylines |
-| 9 | Export to PowerPoint |
 | 10 | Create Marp Presentation Deck |
 | 11 | Generate Fabric Notebook + Synthetic Data |
 
@@ -105,22 +105,20 @@ staging-documentation/
 ├── use-case-[name]-architecture-diagram.excalidraw
 ├── use-case-[name]-architecture-storyline.md
 ├── use-case-[name]-presentation.md
-├── use-case-[name]-presentation.pptx
-├── use-case-[name]-notebook.ipynb
-└── media/
-    └── use-case-[name]-architecture-diagram.png
+└── use-case-[name]-notebook.ipynb
 ```
 
 ## Supported Industries
 
-- Healthcare
-- Finance / Banking
-- Retail / E-commerce
-- Manufacturing
-- Energy & Utilities
-- Transportation & Logistics
-- Telecommunications
-- And more...
+- All industries are supported, including but not limited to:
+  - Healthcare
+  - Finance / Banking
+  - Retail / E-commerce
+  - Manufacturing
+  - Energy & Utilities
+  - Transportation & Logistics
+  - Telecommunications
+  - And more...
 
 ## License
 

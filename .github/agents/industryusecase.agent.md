@@ -300,16 +300,29 @@ After generating the Excalidraw JSON file, provide instructions:
   Activator → Notifications / Actions
 **Get Assisted & Interact:** Copilot, Data Agents, End Users (role-specific)
 
-### Common Relationships Reference. 
-- Data sources → IoT Hub → Eventstream (steps 1-2)
-- Eventstream → Eventhouse (step 3)
-- Eventhouse ↔ OneLake (bi-directional, step 4a)
-- Eventhouse → Digital Twin Builder (step 4b)
-- OneLake/Fabric Graph → ML Models (step 6)
-- ML Models → Real-Time Dashboard (step 7)
-- Real-Time Dashboard/Power BI → Activator (step 8)
-- Dashboards ↔ Copilot (bi-directional, step 9)
-- Data Agents → End Users (step 10)
+### Common (but not limited to) Relationships Reference. 
+- Data sources → IoT Hub → Eventstream
+- Data sources → Azure Event Grid (MQTT) → Eventstream 
+- Data sources → Eventstream
+- Eventstream → Eventhouse 
+- Eventhouse ↔ OneLake (bi-directional)
+- Eventhouse → Fabric IQ [
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents]
+- OneLake → Fabric IQ [
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents]
+- Eventhouse → Real-Time Dashboard
+- Onelake → Real-Time Dashboard
+- Real-Time Dashboard → Activator
+- Power BI → Activator
+- Activator → End Users
+- Data Agents → End Users
+- Operations Agents → End Users
 
 Update the list of tasks to reflect the completion of Phase 7.
 
@@ -351,7 +364,7 @@ For each step in the architecture (typically 10 steps), create a subsection with
 [2-4 sentences explaining what happens at this step, why it matters, and what business value it provides. Include specific technical details like data formats, processing intervals, or transformation logic where relevant.]
 ```
 
-The standard steps to cover (adjust based on use case):
+Some referenceable steps to cover, but not limited to (adjust based on use case):
 1. **Sensor/Data Collection** - Data sources → IoT Hub or ingestion point
 2. **IoT Hub → Eventstream** - Initial streaming ingestion
 3. **Eventstream → Eventhouse** - Time-series storage and processing

@@ -285,7 +285,7 @@ After generating the Excalidraw JSON file, provide instructions:
 - Eventstream → Eventhouse 
 - Eventhouse ↔ OneLake (bi-directional)
 - Eventhouse → Anomaly Detector
-- Eventhouse → Fabric IQ 
+- Eventhouse → Fabric IQ [
   - Digital Twin Builder
   - Graph
   - Data Agents

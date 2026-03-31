@@ -184,9 +184,9 @@ Create 6 vertical swimlanes as rectangles with light pastel background colors an
 |----------|--------------|------------------|
 | Ingest & Process | #1864ab (blue) | #e7f5ff |
 | Analyze & Transform | #e67700 (orange) | #fff3bf |
-| Model & Contextualize | #2f9e44 (green) | #d3f9d8 |
-| Train | #d9480f (orange) | #ffe8cc |
-| Analyze & Act | #7048e8 (purple) | #e5dbff |
+| Model & Train | #2f9e44 (green) | #d3f9d8 |
+| Visualize | #d9480f (orange) | #ffe8cc |
+| Decide & Act | #7048e8 (purple) | #e5dbff |
 | Get Assisted & Interact | #c92a2a (red) | #ffc9c9 |
 
 **D. Component Boxes**
@@ -272,33 +272,62 @@ After generating the Excalidraw JSON file, provide instructions:
 
 ### Components Reference (include only if relevant to use case) and Common Flows Reference
 
-**Ingest & Process:** IoT Hub, MQTT, Event Hub, Eventstream, Data Factory, External streaming sources, Flow Meters, Sensors, Weather Stations
-  Devices / Systems → IoT Hub
-  Data sources → IoT Hub → Eventstream 
-  MQTT / ERP / External Systems → Eventstream
-  Batch / Reference Data → Data Factory
-**Analyze & Transform:** Eventstream, Eventhouse (KQL Database), Data Factory
-  Eventstream → Eventhouse
-  Eventhouse → Eventhouse (internal enrichment / aggregation)
-  Eventhouse ↔ OneLake
-**Model & Contextualize:** OneLake, Shortcuts, Digital Twin Builder, Fabric Graph, Anomaly Detection
-  Eventhouse ↔ OneLake
-  Data Factory → OneLake
-  OneLake → Eventhouse
-**Train:** ML Models (Train & Score)
-  Eventhouse → ML Model
-  OneLake → ML Model
-  ML Model → Eventhouse
-  Graph / Relationship Model ← Eventhouse / OneLake
-**Analyze & Act:** Real-Time Dashboard, Power BI Report, Activator, Querysets
-  Eventhouse → Real-Time Dashboard
-  Eventhouse → Power BI
-  Real-Time Dashboard → Activator
-  ML Model → Dashboards / Reports
-  Power BI Report → Activator
-  Eventhouse → Activator
-  Activator → Notifications / Actions
-**Get Assisted & Interact:** Copilot, Data Agents, End Users (role-specific)
+ **Ingest & Stream:** Connectors, IoT Hub, MQTT, Event Hub, Eventstream, Data Factory, External streaming sources, Flow Meters, Sensors, Weather Stations
+- ERP / External Systems → Eventstream
+- Batch / Reference Data → Data Factory
+- Data sources → IoT Hub → Eventstream
+- Data sources → Azure Event Grid (MQTT) → Eventstream 
+- Data sources → Eventstream
+- Event Schema Set
+
+  **Analyze & Transform:** Eventstream, Eventhouse (KQL Database), Data Factory
+- Eventhouse → Eventhouse (internal enrichment / aggregation)
+- Eventstream → Eventhouse 
+- Eventhouse ↔ OneLake (bi-directional)
+- Eventhouse → Anomaly Detector
+- Eventhouse → Fabric IQ 
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents]
+- OneLake → Fabric IQ [
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents]
+- Eventhouse → Real-Time Dashboard
+
+ **Model & Train:** 
+- Eventhouse → Fabric IQ [
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents]
+- OneLake → Fabric IQ [
+  - Digital Twin Builder
+  - Graph
+  - Data Agents
+  - Operations Agents → Activator]
+- Fabric IQ (Modeling): 
+  - Digital Twin Builder
+  - Fabric Graph
+  - Map
+- Fabric IQ (Training):
+  - Data Agents
+  - Operations Agents → Activator
+- Anomaly Detector
+
+  **Visualize:** Real-Time Dashboard, Power BI Report
+- Eventhouse → Real-Time Dashboard 
+- Eventhouse → Power BI
+- Eventhouse → Fabric Graph 
+    
+ **Decide & Act:** Activator
+ Real-Time Dashboard → Activator
+ Power BI Report → Activator
+ Operations Agents → Activator
+ Activator → Notifications / Actions
+ Operations Agents → Notifications / Actions
 
 ### Common (but not limited to) Relationships Reference. 
 - Data sources → IoT Hub → Eventstream
@@ -370,12 +399,9 @@ Some referenceable steps to cover, but not limited to (adjust based on use case)
 3. **Eventstream → Eventhouse** - Time-series storage and processing
 4. **Eventhouse ↔ OneLake** - Bi-directional data lake integration
 5. **Eventhouse → Digital Twin Builder** - Physical system modeling
-6. **Digital Twin Builder → Fabric Graph** - Relationship modeling
-7. **Digital Twin / OneLake → ML Models** - Model training
-8. **ML Models → Dashboards** - Visualization of predictions
-9. **Dashboards → Activator** - Automated alerting and actions
-10. **Real-Time Dashboard ↔ Copilot** - Natural language interaction
-11. **Data Agents → End Users** - Automated workflows and delivery
+6. **Digital Twin Builder/ OneLake → ML Models** - Model training
+7. **Real-Time Dashboard ↔ Copilot** - Natural language interaction
+8. **Data Agents → End Users** - Automated workflows and delivery
 
 **D. Business Outcomes Connected to Architecture**
 Create a table mapping architecture components to business outcomes:

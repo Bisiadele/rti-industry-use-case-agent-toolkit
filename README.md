@@ -117,6 +117,8 @@ staging-documentation/
 └── use-case-[name]-notebook.ipynb
 ```
 
+The `staging-documentation/Reference Examples/` folder contains curated sample outputs across various industries (Healthcare, Retail, Power & Energy, Data Center, etc.) that demonstrate the expected quality, structure, and style of agent-generated artifacts.
+
 ## Supported Industries
 
 - All industries are supported, including but not limited to:
